@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEC Risk Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>SEC Risk Analyzer — Systematic Thinking View</h1>
+    <div id="controls">
+        <input type="text" id="ticker" placeholder="Enter ticker symbol (e.g., AAPL)" />
+        <label>Limit: <input type="number" id="limit" value="3" min="1" max="20" style="width:60px"/></label>
+        <label>Window days: <input type="number" id="window_days" value="365" min="1" max="3650" style="width:80px"/></label>
+        <label><input type="checkbox" id="include_raw"/> include raw events</label>
+        <button id="analyzeBtn">Analyze</button>
+    </div>
+
+    <div id="results"></div>
+
+    <!-- Cytoscape for graph visualizations -->
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

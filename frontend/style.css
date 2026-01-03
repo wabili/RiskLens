@@ -1,0 +1,13 @@
+body { font-family: Inter, system-ui, -apple-system, Helvetica, Arial, sans-serif; margin: 20px; }
+h1 { font-size: 20px; margin-bottom: 8px; }
+#controls { margin-bottom: 12px; display:flex; gap:8px; align-items:center; flex-wrap:wrap }
+input, button { padding: 8px; margin: 2px; }
+#results { display:flex; flex-direction:column; gap:18px; }
+.filing-card { border: 1px solid #e2e8f0; padding: 10px; border-radius:6px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.filing-meta { font-size: 13px; color:#334155; margin-bottom:8px }
+.cy-container { width:100%; height:320px; border:1px solid #e6eef8; border-radius:6px }
+.node-label { font-weight:600 }
+.event-badge { background:#f1f5f9; padding:6px; border-radius:6px; display:inline-block; margin-right:6px; font-size:12px }
+
+/* small screens */
+@media (max-width:800px){ .cy-container { height:260px } }

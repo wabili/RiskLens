@@ -1,0 +1,315 @@
+{
+  "reverse_stock_split": {
+    "keywords": [
+      "reverse stock split",
+      "reverse split",
+      "share consolidation",
+      "share consolidations",
+      "implement a reverse stock split",
+      "effect a reverse stock split",
+      "consolidate outstanding shares",
+      "reduce the number of outstanding shares",
+      "maintain minimum bid price requirement",
+      "comply with listing standards through reverse split",
+      "1-for-10 reverse split",
+      "1-for-20 reverse split",
+      "1-for-100 reverse split",
+      "consolidation of shares",
+      "share consolidation ratio",
+      "reverse split approved by shareholders",
+      "board authorized reverse stock split"
+    ],
+    "T_star_days": 14,
+    "confidence_interval": [11, 17],
+    "description": "Mechanical share consolidation to maintain exchange listing",
+    "event_nature": "corporate_action",
+    "likely_triggers": ["low share price", "listing requirement", "shareholder approval"]
+  },
+  "authorized_share_increase": {
+    "keywords": [
+      "increase in authorized common stock",
+      "amendment to certificate of incorporation to increase authorized shares",
+      "authorized share capital increase",
+      "increase in authorized share capital",
+      "proposal to increase the number of authorized shares",
+      "amended and restated certificate of incorporation",
+      "amended and restated articles of incorporation",
+      "amended and restated memorandum and articles of association",
+      "increase in the number of authorized common shares",
+      "seek shareholder approval to increase authorized shares"
+    ],
+    "T_star_days": 12,
+    "confidence_interval": [9, 15],
+    "description": "Corporate authorization to issue more shares (potential dilution signal)",
+    "event_nature": "single",
+    "likely_triggers": ["equity_offering", "blank_check_preferred_stock"]
+  },
+  "equity_offering": {
+    "keywords": [
+      "equity offering",
+      "public offering of common stock",
+      "registered direct offering",
+      "PIPE transaction",
+      "at-the-market offering",
+      "issuance of common stock",
+      "additional equity financing",
+      "raise capital through equity issuance",
+      "dilutive equity offering",
+      "issuance of shares to investors",
+      "capital raise through registered offering",
+      "shelf registration statement",
+      "going forward, we may issue additional shares"
+    ],
+    "T_star_days": 16,
+    "confidence_interval": [13, 19],
+    "description": "New share issuance causing potential dilution",
+    "event_nature": "single",
+    "likely_triggers": []
+  },
+  "blank_check_preferred_stock": {
+    "keywords": [
+      "blank check preferred stock",
+      "series of preferred stock",
+      "designate a series of preferred shares",
+      "issuance of blank check preferred stock",
+      "preferred stock designation",
+      "directors may issue preferred stock",
+      "board may determine rights, preferences and privileges",
+      "without shareholder approval",
+      "in the absolute discretion of the board",
+      "preferred stock with liquidation preference",
+      "preferred stock with conversion rights",
+      "designate up to shares of preferred stock",
+      "create a new series of preferred shares",
+      "preferred stock offering"
+    ],
+    "T_star_days": 18,
+    "confidence_interval": [14, 22],
+    "description": "Authorization to issue preferred shares with flexible terms (governance risk)",
+    "event_nature": "single",
+    "likely_triggers": ["convertible_debt", "corporate_restructuring"]
+  },
+  "warrant_activity": {
+    "keywords": [
+      "warrant exercise",
+      "cashless exercise of warrants",
+      "net exercise of warrants",
+      "warrant redemption",
+      "forced exercise of warrants"
+    ],
+    "T_star_days": 13,
+    "confidence_interval": [10, 16],
+    "description": "Warrant conversions causing potential share dilution",
+    "event_nature": "single",
+    "likely_triggers": []
+  },
+  "convertible_debt": {
+    "keywords": [
+      "convertible notes",
+      "convertible debt",
+      "conversion of notes into common stock",
+      "induce conversion of debt",
+      "exchange offer for debt securities",
+      "debt-for-equity swap"
+    ],
+    "T_star_days": 20,
+    "confidence_interval": [16, 24],
+    "description": "Debt conversion into equity (dilution + financial restructuring signal)",
+    "event_nature": "single",
+    "likely_triggers": ["equity_offering", "financial_distress_indicators"]
+  },
+  "corporate_restructuring": {
+    "keywords": [
+      "capital structure modification",
+      "capital reorganization",
+      "reclassification of common stock",
+      "exchange of common stock",
+      "adjustment to capital accounts",
+      "amendment to governing documents",
+      "amendment to bylaws",
+      "amendment to articles",
+      "corporate reorganization",
+      "recapitalization",
+      "recapitalization plan",
+      "financial restructuring",
+      "balance sheet restructuring"
+    ],
+    "T_star_days": 25,
+    "confidence_interval": [21, 29],
+    "description": "Fundamental changes to corporate capital structure",
+    "event_nature": "process",
+    "likely_triggers": ["authorized_share_increase", "equity_offering", "going_concern_opinion"]
+  },
+  "going_concern_opinion": {
+    "keywords": [
+      "substantial doubt about the company's ability to continue as a going concern",
+      "does not expect to continue as a going concern",
+      "inability to generate sufficient cash to operate as an independent going concern",
+      "substantial doubt about ability to continue as a going concern",
+      "going concern uncertainty",
+      "conditions raise substantial doubt about going concern"
+    ],
+    "T_star_days": 44,
+    "confidence_interval": [39, 49],
+    "description": "Auditor expresses doubt about company's survival",
+    "event_nature": "process",
+    "likely_triggers": ["delisting_and_deregistration", "liquidation_and_dissolution", "bankruptcy_filing"]
+  },
+  "financial_distress_indicators": {
+    "keywords": [
+      "net loss of",
+      "accumulated deficit of",
+      "no access to a revolving credit facility",
+      "permanently eliminated our ability to borrow",
+      "significant liquidity constraints",
+      "substantial operating losses",
+      "limited cash resources",
+      "inability to secure additional capital",
+      "substantial secured and unsecured indebtedness",
+      "inability to refinance such indebtedness",
+      "debt obligations of",
+      "valuation allowance on net operating loss",
+      "decrease in revenue projections"
+    ],
+    "T_star_days": 30,
+    "confidence_interval": [26, 34],
+    "description": "Multiple indicators of severe financial stress",
+    "event_nature": "process",
+    "likely_triggers": ["going_concern_opinion", "debt_covenant_violations", "strategic_evaluation"]
+  },
+  "liquidation_and_dissolution": {
+    "keywords": [
+      "plan of dissolution",
+      "liquidation and dissolution",
+      "no assets remaining for distribution to stockholders",
+      "assignment for the benefit of creditors",
+      "general assignment",
+      "ceased its business operations",
+      "filed a certificate of dissolution",
+      "dissolution effective time",
+      "complete loss on investment",
+      "stockholders will suffer a complete loss",
+      "no liquidating distributions to stockholders expected",
+      "wind-down of business",
+      "terminated all remaining employees",
+      "unable to pay its debts in full",
+      "remaining obligations exceed the value of the assets",
+      "will not be able to provide any return to stockholders",
+      "transferred all remaining assignable assets",
+      "after completion of all asset sales the company would not have any remaining business operations",
+      "remaining assets liabilities and affairs would become subject to the plan of liquidation",
+      "amended plan of liquidation and dissolution",
+      "sell substantially all of their assets",
+      "company may choose to liquidate the company's remaining assets",
+      "stockholders will experience a significant or complete loss of their investment",
+      "proceeds from the liquidation would be applied based on contractual priorities",
+      "cease operations",
+      "no recovery for our stockholders",
+      "maximize reasonably attainable value for residual claimants",
+      "wind up its affairs and dissolve",
+      "final closings under asset purchase agreement",
+      "transferred to assignee in trust for creditors"
+    ],
+    "T_star_days": 55,
+    "confidence_interval": [50, 60],
+    "description": "Formal process of winding down and terminating corporate existence",
+    "event_nature": "process",
+    "likely_triggers": []
+  },
+  "delisting_and_deregistration": {
+    "keywords": [
+      "listing on nasdaq is expected to be terminated",
+      "no assurance that trading will be possible",
+      "determined to delist the company's common stock from nasdaq",
+      "voluntary delisting from nasdaq",
+      "delisted from nasdaq",
+      "no arrangement for listing on another national securities exchange",
+      "trading will cease",
+      "deregister unsold securities",
+      "terminate the offerings of securities",
+      "remove from registration",
+      "will not have any remaining operating business",
+      "ongoing compliance with nasdaq rules would not be possible",
+      "burdens associated with operating as a listed public company outweigh advantages"
+    ],
+    "T_star_days": 40,
+    "confidence_interval": [36, 44],
+    "description": "Termination of public trading status and SEC registration",
+    "event_nature": "process",
+    "likely_triggers": ["liquidation_and_dissolution", "assignment_for_benefit_of_creditors"]
+  },
+  "debt_covenant_violations": {
+    "keywords": [
+      "temporary waivers of potential defaults",
+      "temporary waivers of potential defaults or events of default",
+      "first amendment to amended and restated limited waiver",
+      "borrowers solvency representation being false",
+      "curtailment covenants failure",
+      "interest payment covenant failure",
+      "minimum liquidity covenant failure",
+      "increased loan amounts with respect to inventory during waiver period"
+    ],
+    "T_star_days": 33,
+    "confidence_interval": [29, 37],
+    "description": "Breach of loan agreement terms requiring lender waivers",
+    "event_nature": "process",
+    "likely_triggers": ["default_on_debt", "bankruptcy_filing", "financial_restructuring"]
+  },
+  "asset_sales_and_divestitures": {
+    "keywords": [
+      "sold substantially all of their assets",
+      "assets held for sale",
+      "divestitures",
+      "right size our rv inventory",
+      "use retained proceeds for working capital to support operations until completion of all asset sales",
+      "maximum retained proceeds amount of $4500000"
+    ],
+    "T_star_days": 28,
+    "confidence_interval": [24, 32],
+    "description": "Major business asset disposals indicating strategic retreat",
+    "event_nature": "process",
+    "likely_triggers": ["liquidation_and_dissolution", "strategic_evaluation"]
+  },
+  "executive_departures": {
+    "keywords": [
+      "resigned as chief executive officer",
+      "resigned effective",
+      "resigned effective on",
+      "resigned from the board",
+      "termination of employment for chief financial officer",
+      "closed its stock transfer books",
+      "shares no longer assignable or transferable"
+    ],
+    "regex_patterns": [
+      "resign(?:ed|s)(?:\\s+effective(?:\\s+on)?)?\\s+[A-Z][a-z]+\\s+\\d{1,2},\\s*\\d{4}"
+    ],
+    "T_star_days": 17,
+    "confidence_interval": [13, 21],
+    "description": "Key leadership changes and administrative restrictions",
+    "event_nature": "single",
+    "likely_triggers": ["strategic_evaluation", "ceo_resignation_duress"]
+  },
+  "strategic_evaluation": {
+    "keywords": [
+      "lengthy and thorough evaluation of strategic alternatives",
+      "no other party provided a transaction on terms more favorable",
+      "inability to secure additional capital from investors"
+    ],
+    "T_star_days": 22,
+    "confidence_interval": [18, 26],
+    "description": "Public acknowledgment of exploring sale, merger, or liquidation",
+    "event_nature": "process",
+    "likely_triggers": ["liquidation_and_dissolution", "asset_sales_and_divestitures", "delisting_and_deregistration"]
+  },
+  "debt_modification": {
+    "keywords": [
+      "debt modification",
+      "repay senior secured indebtedness"
+    ],
+    "T_star_days": 26,
+    "confidence_interval": [22, 30],
+    "description": "Restructuring of existing debt obligations",
+    "event_nature": "process",
+    "likely_triggers": ["debt_covenant_violations", "default_on_debt", "bankruptcy_filing"]
+  }
+}

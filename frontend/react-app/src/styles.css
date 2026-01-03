@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* app specific styles */
+body { @apply bg-slate-50 text-slate-800 }
+input{ @apply px-2 py-1 border rounded }
+button{ @apply px-3 py-1 bg-sky-600 text-white rounded }
+.cy-popover { position: absolute; background: white; border: 1px solid #e2e8f0; padding: 8px; border-radius:6px; box-shadow:0 6px 18px rgba(2,6,23,0.08); z-index:50; max-width:360px }
+

@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+models-cache/
+data/uploads/
+data/faiss_index*
+.env
