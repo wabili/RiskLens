@@ -1,4 +1,4 @@
-This proposal presents a modular, deployable sys-
+This project is a modular, deployable sys-
 tem for automated detection of high-risk disclo-
 sures in U.S. Securities and Exchange Commis-
 sion (SEC) filings. Leveraging a pipeline of struc-
