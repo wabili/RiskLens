@@ -1,7 +1,9 @@
-# Virtual environments
-.venv/
+cat > .gitignore <<EOF
+# Virtual Environments
 venv/
+.venv/
 env/
+ENV/
 
 # Python
 __pycache__/
@@ -14,8 +16,25 @@ __pycache__/
 
 # OS
 .DS_Store
+.DS_Store?
 
-# Logs & data (optional)
+# Logs & Data
 *.log
+*.csv
+*.json
 data/
 models/
+*.bin
+*.pt
+*.pth
+*.onnx
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PDFs (optional – if you don’t want to track the paper)
+
+EOF
