@@ -16,15 +16,13 @@ platforms such as Fly.io, ensuring scalability, reproducibility, and adherence t
 Policy. The system avoids large language mod-
 els (LLMs) in favor of lightweight, interpretable,
 and low-latency techniques, making it suitable for
-real-time screening of corporate disclosures. Op-
-tional frontend integration enables user-friendly
+real-time screening of corporate disclosures. Optional frontend integration enables user-friendly
 access, while a flexible keyword management
 strategy supports continuous refinement of risk de-
 tection logic. This tool aims to empower investors,
 researchers, and compliance professionals with
 timely insights into emerging corporate risks —
-all within a transparent, maintainable, and ethi-
-cally responsible framework.
+all within a transparent, maintainable, and ethically responsible framework.
 <img width="1895" height="976" alt="Screenshot 2026-01-03 at 20 43 38" src="https://github.com/user-attachments/assets/54d6bb49-ca81-43af-bcee-0d2a9b4e1dfc" />
 
 
